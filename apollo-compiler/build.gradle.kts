@@ -10,6 +10,8 @@ plugins {
 java {
   targetCompatibility = JavaVersion.VERSION_1_7
   sourceCompatibility = JavaVersion.VERSION_1_7
+
+  sourceSets["test"].java.srcDir("src/test/graphql").exclude("**/*.java")
 }
 
 dependencies {

@@ -1,0 +1,22 @@
+query TestQuery {
+  hero {
+    friends {
+      ...FriendDetails
+    }
+  }
+
+}
+
+fragment FriendDetails on Character {
+  ...CharacterDetails
+  ... on Human {
+    homePlanet
+  }
+  ... on Droid {
+    primaryFunction
+  }
+}
+
+fragment CharacterDetails on Character {
+  id
+}
