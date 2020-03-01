@@ -263,6 +263,15 @@ fun Project.configurePublishing() {
           password = findProperty("SONATYPE_NEXUS_PASSWORD") as String?
         }
       }
+
+      maven {
+        name = "aliyun"
+        url = uri("https://repo.rdc.aliyun.com/repository/73792-release-PXkyIy/")
+        credentials {
+          username = findProperty("ALIYUN_NEXUS_USERNAME") as String?
+          password = findProperty("ALIYUN_NEXUS_PASSWORD") as String?
+        }
+      }
     }
   }
 }
